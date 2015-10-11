@@ -1,0 +1,248 @@
+game.Tortugas = game.Enemigo.extend({
+    init: function (x,y) {
+		
+		/* -- La tortuga se transforma en caparazon si la das desde arriba saltando o desde abajo empujando
+		el bloque. Dependiendo de como la des tendrá una sprite diferente
+		   -- Puede ser frenada si la pisas desde arriba desde abajo, denpendiendo de donde la des su sprite cambia
+		   -- Cuando pasa por la tuberia su forma vuelve a su origen.
+		   --Si la golpeas desde el bloque y levantada la vuelves a golpear vuelve a su origen.
+		   --Si la tortuga colisiona con el resto de enemigos, a estos le lesvantará un poquito.
+		   --
+		   */
+		this.varAnimacion="";
+		this.bucleTiempo=100;
+		this.tocoTuberia=false;
+		this.tipo="tortuga";
+		this.direccion=1;
+		this.levantar=50;
+		this.enfadado=0;
+		
+        this._super(game.Enemigo, "init", [x,y,{
+			
+			image:'tortugas',
+			width:350,
+			height:25,
+			framewidth:20,
+			frameheight:25
+			
+		}]);
+		
+		
+		
+		
+		this.body.removeShapeAt(0);
+		this.body.addShape(new me.Rect(0, 0, 20, 25));
+		
+		this.body.setVelocity(2,7);
+		this.body.setMaxVelocity(10,7);
+		this.body.setFriction(0.070,0);
+		
+		
+		this.almacenVelX=this.body.accel.x;	
+		this.almacenVelY=this.body.accel.y;	
+		
+		this.renderable.addAnimation("andando_0", [0,1], 200);
+		
+		this.renderable.addAnimation("cambiarDir_0", [2,3,4], 200);
+		this.renderable.addAnimation("delReves", [5]);
+		this.renderable.addAnimation("volviendo", [6]);
+		this.renderable.addAnimation("empujado", [7,8,9], 100);
+		this.renderable.addAnimation("caparazon", [10]);
+		this.renderable.addAnimation("caparazonMovimiento", [10,11,12],100);
+		
+		
+		this.renderable.setCurrentAnimation("andando_0");
+		
+		
+    },
+	
+	update: function (time) {
+		
+		this._super(game.Enemigo, "update", [time]);
+		
+		if(!this.levantado)
+		{
+			
+			this.onMoverse(0.3);
+			
+		}
+		else if(this.levantado)
+		{
+			if(this.caparazoneado)
+				this.onMoverse(0);
+			else
+				this.onMoverse(1);
+				// this.onMoverse(1);
+		}
+		
+		this.body.update(time);
+		me.collision.check(this);
+		
+		
+	
+	},
+	onMoverse:function(potencia){
+		
+			this.body.vel.x=this.body.accel.x*me.timer.tick*potencia*this.direccion;
+		
+	},
+	onVuelta: function(direccion,animacion)
+	{
+		var contador=this.levantar;
+		var animacion=animacion || "delReves"
+		
+		if(this.levantado)
+		{
+			// this.body.vel.y=-this.body.maxVel.y;
+			// this.renderable.flipY(false);
+			// this.levantado=false;
+			me.timer.clearInterval(this.timer);
+			// this.renderable.setCurrentAnimation("caparazon");		
+			return false;
+			
+		}
+			
+		
+		
+		this.renderable.setCurrentAnimation(animacion);
+				
+		this.levantado=true;
+		
+				
+		var _this = this;
+		var tembleque=2.080;
+		
+		this.timer = me.timer.setInterval(function () {
+			
+			contador -=1;
+			if(contador<10 && contador>0)
+			{
+							
+				tembleque*=-1;
+				_this.pos.x+=tembleque;
+				_this.renderable.setCurrentAnimation("volviendo");		
+				
+				
+			}
+			else if(contador<=-1)
+			{
+				
+				_this.levantado=false;
+				_this.caparazoneado=false;
+				_this.renderable.setCurrentAnimation("andando_0");		
+				
+				//contador=_this.levantar;
+				
+				me.timer.clearInterval(_this.timer);
+			}
+				
+		}, _this.bucleTiempo);
+	},
+	onEmpujar:function(dirPersonaje)
+	{	
+			this.body.collisionType = me.collision.types.PROJECTILE_OBJECT;
+			this.body.setCollisionMask(me.collision.types.WORLD_SHAPE | me.collision.types.ENEMY_OBJECT);
+			
+			this.caparazoneado=false;
+			
+			me.timer.clearInterval(this.timer);
+			var _this=this;
+			this.timer = me.timer.setTimeout(function () {
+				
+				//Con este micro segundo conseguimos que Mario pueda ser dannado.
+				_this.body.setCollisionMask(me.collision.types.WORLD_SHAPE | me.collision.types.ENEMY_OBJECT | me.collision.types.PLAYER_OBJECT);	
+			}, 200);
+			
+			this.renderable.setCurrentAnimation(this.varAnimacion);
+			this.direccion=dirPersonaje;
+			
+			
+		
+	},
+	onCollision: function (res, other) {
+		switch (other.body.collisionType) {
+            case me.collision.types.WORLD_SHAPE:
+				
+				res.overlapV.x=0;
+				
+				if(other.type==="vuelta" && other.subido)
+				{
+					
+					this.onVuelta(this.direccion,"delReves");
+					this.varAnimacion="empujado";
+					this.caparazoneado=true;
+							
+					this.body.vel.y=-this.body.maxVel.y;
+					this.body.vel.x=this.body.accel.x *me.timer.tick * this.direccion;
+					return true;
+				
+				}
+				else if(other.type==="tuberia")
+				{
+										
+					this.tocoTuberia=true;
+					this.body.setVelocity(1,0);
+					this.body.setCollisionMask(me.collision.types.WORLD_SHAPE);
+					
+					return false;
+					
+				}
+				else if(other.type==="reActivar")
+				{
+				 
+					this.tocoTuberia=false;
+					this.body.setVelocity(this.almacenVelX,this.almacenVelY);
+					this.body.setCollisionMask(me.collision.types.WORLD_SHAPE | me.collision.types.PLAYER_OBJECT  | me.collision.types.ENEMY_OBJECT);
+					
+				 
+				
+					return false;
+				}
+			// return true;
+			break;
+			case me.collision.types.PLAYER_OBJECT:
+				if(res.overlapV.y <0 &&  other.body.falling)
+				{
+					if(this.levantado)
+					{
+						this.onVuelta(this.direccion,"delReves");
+						this.varAnimacion="empujado";
+					}
+						
+					else{
+						this.onVuelta(this.direccion,"caparazon");
+						this.varAnimacion="caparazonMovimiento";
+					}
+						
+					this.caparazoneado=true;
+					
+					other.body.vel.y = -other.body.maxVel.y  * me.timer.tick;
+				}
+				else if((res.overlapV.x<0 || res.overlapV.x>0) && this.caparazoneado)
+					this.onEmpujar(other.direccion);
+				else if((res.overlapV.x<0 || res.overlapV.x>0) && !this.caparazoneado)
+					other.hurt();
+			return true;
+			break;
+			
+			case me.collision.types.ENEMY_OBJECT:
+			
+				if(!this.levantado){
+					this.body.vel.x=0;
+					this.onRetroceder();
+				}
+					
+					
+			return false;
+			break;
+			
+			default:false;
+			
+			
+			
+		}
+	},
+	
+	
+	
+});

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="15" tilewidth="15" tileheight="15" nextobjectid="84">
+ <tileset firstgid="1" name="tiled2" tilewidth="16" tileheight="16" margin="1">
+  <image source="../img/tiled2.png" width="34" height="31"/>
+ </tileset>
+ <layer name="Capa de Patrones 1" width="50" height="15">
+  <data encoding="base64">
+   AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+  </data>
+ </layer>
+ <objectgroup color="#ff0000" name="jugador"/>
+ <objectgroup color="#ffaa00" name="bloque">
+  <object id="2" name="bloque" type="vuelta" x="105" y="90" width="15" height="15"/>
+  <object id="18" name="bloque" type="vuelta" x="30" y="30" width="15" height="15"/>
+  <object id="26" name="bloque" type="vuelta" x="120" y="90" width="15" height="15"/>
+  <object id="31" name="bloque" type="vuelta" x="150" y="90" width="15" height="15"/>
+  <object id="32" name="bloque" type="vuelta" x="135" y="90" width="15" height="15"/>
+  <object id="40" name="bloque" type="vuelta" x="90" y="90" width="15" height="15"/>
+  <object id="41" name="bloque" type="vuelta" x="75" y="90" width="15" height="15"/>
+  <object id="48" name="bloque" type="vuelta" x="15" y="30" width="15" height="15"/>
+  <object id="49" name="bloque" type="vuelta" x="0" y="30" width="15" height="15"/>
+  <object id="50" name="bloque" type="vuelta" x="45" y="30" width="15" height="15"/>
+  <object id="51" name="bloque" type="vuelta" x="60" y="30" width="15" height="15"/>
+  <object id="52" name="bloque" type="vuelta" x="75" y="30" width="15" height="15"/>
+  <object id="53" name="bloque" type="vuelta" x="225" y="30" width="15" height="15"/>
+  <object id="54" name="bloque" type="vuelta" x="210" y="30" width="15" height="15"/>
+  <object id="55" name="bloque" type="vuelta" x="195" y="30" width="15" height="15"/>
+  <object id="56" name="bloque" type="vuelta" x="180" y="30" width="15" height="15"/>
+  <object id="57" name="bloque" type="vuelta" x="165" y="30" width="15" height="15"/>
+  <object id="58" name="bloque" type="vuelta" x="150" y="30" width="15" height="15"/>
+  <object id="59" name="bloque" type="vuelta" x="60" y="90" width="15" height="15"/>
+  <object id="60" name="bloque" type="vuelta" x="165" y="90" width="15" height="15"/>
+  <object id="61" name="bloque" type="vuelta" x="0" y="150" width="15" height="15"/>
+  <object id="62" name="bloque" type="vuelta" x="15" y="150" width="15" height="15"/>
+  <object id="63" name="bloque" type="vuelta" x="30" y="150" width="15" height="15"/>
+  <object id="64" name="bloque" type="vuelta" x="45" y="150" width="15" height="15"/>
+  <object id="65" name="bloque" type="vuelta" x="60" y="150" width="15" height="15"/>
+  <object id="66" name="bloque" type="vuelta" x="75" y="150" width="15" height="15"/>
+  <object id="67" name="bloque" type="vuelta" x="165" y="150" width="15" height="15"/>
+  <object id="68" name="bloque" type="vuelta" x="180" y="150" width="15" height="15"/>
+  <object id="69" name="bloque" type="vuelta" x="195" y="150" width="15" height="15"/>
+  <object id="70" name="bloque" type="vuelta" x="150" y="150" width="15" height="15"/>
+  <object id="71" name="bloque" type="vuelta" x="210" y="150" width="15" height="15"/>
+  <object id="72" name="bloque" type="vuelta" x="225" y="150" width="15" height="15"/>
+  <object id="74" name="bloque" type="vuelta" x="15" y="90" width="15" height="15"/>
+  <object id="75" name="bloque" type="vuelta" x="0" y="90" width="15" height="15"/>
+  <object id="76" name="bloque" type="vuelta" x="225" y="90" width="15" height="15"/>
+  <object id="77" name="bloque" type="vuelta" x="210" y="90" width="15" height="15"/>
+  <object id="78" name="bloque" type="vuelta" x="240" y="150" width="15" height="15"/>
+  <object id="80" name="bloque" type="vuelta" x="-15" y="30" width="15" height="15"/>
+  <object id="81" name="bloque" type="vuelta" x="-30" y="45" width="15" height="15"/>
+  <object id="82" name="bloque" type="vuelta" x="255" y="30" width="15" height="15"/>
+  <object id="83" name="bloque" type="vuelta" x="240" y="30" width="15" height="15"/>
+ </objectgroup>
+ <objectgroup color="#5555ff" name="collision">
+  <object id="3" x="-510" y="210" width="810" height="15"/>
+  <object id="14" type="reActivar" x="45" y="15" width="15" height="15"/>
+  <object id="25" type="reActivar" x="180" y="15" width="15" height="15"/>
+ </objectgroup>
+ <objectgroup color="#55aa7f" name="tuberia">
+  <object id="9" name="tuberia" type="tuberia" x="0" y="180" width="30" height="30">
+   <properties>
+    <property name="destino" value="entrada"/>
+    <property name="identificador" value="2"/>
+    <property name="miraIzq" value="false"/>
+    <property name="movShapeX" value="0"/>
+    <property name="movShapeY" value="0"/>
+   </properties>
+  </object>
+  <object id="10" name="tuberia" type="tuberia" x="210" y="180" width="30" height="30">
+   <properties>
+    <property name="identificador" value="1"/>
+    <property name="miraIzq" value="true"/>
+    <property name="movShapeX" value="0"/>
+    <property name="movShapeY" value="0"/>
+   </properties>
+  </object>
+  <object id="11" name="tuberia" type="tuberia" x="210" y="0" width="30" height="30">
+   <properties>
+    <property name="destino" value="salida"/>
+    <property name="identificador" value="2"/>
+    <property name="miraIzq" value="true"/>
+    <property name="movShapeX" value="0"/>
+    <property name="movShapeY" value="0"/>
+   </properties>
+  </object>
+  <object id="23" name="tuberia" type="tuberia" x="0" y="0" width="30" height="30">
+   <properties>
+    <property name="destino" value="salida"/>
+    <property name="identificador" value="1"/>
+    <property name="miraIzq" value="false"/>
+    <property name="movShapeX" value="0"/>
+    <property name="movShapeY" value="0"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
