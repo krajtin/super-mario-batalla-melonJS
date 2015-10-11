@@ -35,7 +35,7 @@ var game = {
                 me.plugin.register.defer(this, me.debug.Panel, "debug", me.input.KEY.V);
             });
         }
-		 me.debug.renderHitBox = true;
+		 // me.debug.renderHitBox = true;
 		me.pool.register("jugador", game.Jugador);
 		me.pool.register("bloque", game.Bloque);
 		me.pool.register("tuberia", game.Tuberia);
